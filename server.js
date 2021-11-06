@@ -11,5 +11,5 @@ app.use(express.static('./'));
 //app.get('/*', function(req, res) {
     //res.sendFile('src/index.html', {root: 'dist/MyArticlesBlog/'}
 //  );
-});
+//});
 app.listen(process.env.PORT || 8080);
