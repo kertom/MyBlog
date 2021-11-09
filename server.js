@@ -9,8 +9,10 @@ const express = require('express');
 const app = express();
 //app.use(express.static('../dist/MyArticlesBlog/'));
 app.use(express.static('./'));
-app.get('/*', function(req, res) {
-    res.sendFile('index.html', {root: 'dist/MyArticlesBlog/'}
-  );
+app.get('/test', function(req, res) {
+    res.sendFile('src/index.html',
+    {root:__dirname});//, {root: 'dist/MyArticlesBlog/'}
+    
+  //);
 });
 app.listen(process.env.PORT || 8080);
