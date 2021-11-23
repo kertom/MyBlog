@@ -21,6 +21,10 @@ app.get('/', function(req, res) {
     res.sendFile('www/vendor-es2015.js', 
     {root:__dirname});
 
+    res.sendFile('www/runtime-es2015.js', 
+    {root:__dirname});
+
+
   //);
 });
 app.listen(process.env.PORT || 8080);
