@@ -7,14 +7,19 @@ function requireHTTPS(req, res, next) {
 }
 const express = require('express');
 const app = express();
-app.use(requireHTTPS);
-app.use(express.static('./dist/MyArticlesBlog'));
+//app.use(requireHTTPS);
+//app.use(express.static('./dist/MyArticlesBlog'));
 //app.use(express.static('./'));
+app.use(express.static('./dist/'));
 app.get('/*', function(req, res) {
-    res.sendFile('index.html',
-    {root:'dist/MyArticlesBlog/'});
+ res.sendFile('index.html', {root:'dist'});
+});
+
+//app.get('/*', function(req, res) {
+ //   res.sendFile('index.html',
+ //   {root:'dist/MyArticlesBlog/'});
     
 
   //);
-});
+//});
 app.listen(process.env.PORT || 8080);
