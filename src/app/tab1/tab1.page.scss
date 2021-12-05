@@ -1,0 +1,21 @@
+main{
+    width: 500px;
+    display: flex;
+  }
+  
+  #photo{
+    background-image: url("assets/homePicture.jpg");  
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    // display: inline-block;
+    // float: right;
+  }
+  
+  #text{
+    margin-left: 20px;
+    
+    h2{
+      margin: 0;
+    }
+  }
