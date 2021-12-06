@@ -1,32 +1,11 @@
 
-<ion-content [fullscreen]="true">
- 
-  <ion-item>
-    <ion-thumbnail slot="start">
-      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-    </ion-thumbnail>
-    <ion-label>Article about guide dogs.</ion-label>
-  </ion-item>
+  <div color="primary" *ngFor='let article of this.articles' style="display:flex;">
+    <div><img src=”{{article.imageUrl}}”></div>
+    <div>
+    <h2>{{article.title}}</h2>
+    {{article.intro}}
+    <div>
+      <ion-button expand="full" (click)="openDetails()">Go to Details with function</ion-button>
 
-  <ion-item>
-    <ion-thumbnail slot="start">
-      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-    </ion-thumbnail>
-    <ion-label>Article about disability: I am not an alien. How people see disabled people.</ion-label>
-  </ion-item>
+   <div>
 
-  <ion-item>
-    <ion-thumbnail slot="start">
-      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-    </ion-thumbnail>
-    <ion-label>Article about literature books.</ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-thumbnail slot="start">
-      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-    </ion-thumbnail>
-    <ion-label>Article about not being miserable.Advice about stress management.</ion-label>
-  </ion-item>
-
-</ion-content>
