@@ -21,7 +21,7 @@ const routes: Routes = [
             then( m => m.Tab2PageModule)
           },
           {
-            path: 'article-details',
+            path: ':id',//article-details
             loadChildren: () => 
             import('../article-details/article-details.module').
             then( m => m.ArticleDetailsPageModule)

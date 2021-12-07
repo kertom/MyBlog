@@ -52,7 +52,7 @@ export class Tab2Page {
   }
 
   goToPlanets() {
-    this.navController.navigateRoot(`/tabs/tab2`)
+    this.navController.navigateRoot(`/tabs/tab2/2`)
   }
 
 
