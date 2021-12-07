@@ -48,7 +48,7 @@ export class Tab2Page {
     // But the standard Router is recommended.
     // this.navController.navigateForward(`/tabs/films/42`);
     console.log('go on!');
-    this.router.navigateByUrl(`tabs:1`);
+    this.router.navigateByUrl(`article-details`);
   }
 
   goToPlanets() {
