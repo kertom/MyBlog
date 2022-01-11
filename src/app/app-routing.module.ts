@@ -1,20 +1,17 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { ArticleDetailsPage } from './article-details/article-details.page';
+import { ArticlesListComponent } from './articles-list/articles-list.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },
-  {
-    path: 'article-details',
-    loadChildren: () => import('./article-details/article-details.module').
-    then( m => m.ArticleDetailsPageModule)
+    component: HomeComponent
   },
   {
     path: 'articles',
-    component:ArticleDetailsPage
+    component:ArticlesListComponent
   }
 ];
 @NgModule({
