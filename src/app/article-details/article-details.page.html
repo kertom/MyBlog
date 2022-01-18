@@ -2,8 +2,18 @@
   <ion-toolbar>
     <ion-title>articleDetails</ion-title>
   </ion-toolbar>
+  <app-articles-menu></app-articles-menu>
 </ion-header>
 
 <ion-content>
+  <div color="primary" *ngFor='let article of this.articles' style="display:flex;">
+    <div><img src=”{{article.imageUrl}}”></div>
+    <div>
+    <h2>{{article.title}}</h2>
+    {{article.intro}}
+    <div>
+      <ion-button expand="full" (click)="openDetails()">Go to Details with function</ion-button>
+
+   <div>
 
 </ion-content>
