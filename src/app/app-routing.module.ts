@@ -7,17 +7,18 @@ import { ArticleBodyPage } from './article-body/article-body.page';
 
 const routes: Routes = [
   {
-    path: '',
-    component: HomeComponent
-  },
-  {
     path: 'articles',
     component:ArticlesListComponent
   },
   {
     path: 'article-body',
     component:ArticleBodyPage
+  },
+  {
+    path: '',
+    component: HomeComponent
   }
+  
 ];
 @NgModule({
   imports: [
