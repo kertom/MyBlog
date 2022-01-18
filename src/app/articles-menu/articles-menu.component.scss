@@ -1,8 +1,12 @@
 ul{
     display:flex;
     list-style-type: none;
-
-}
-li{
-    flex: 1;
+    position:relative;
+    z-index:1000;
+    li{
+        flex: 1;
+        a{
+            cursor:pointer;
+        }
+    }
 }

@@ -1,12 +1,16 @@
 
+<main [fullscreen]="true">
   <h1>Articles here!</h1>
-  <div color="primary" *ngFor='let article of this.articles' style="display:flex;">
-    <div><img src=”{{article.imageUrl}}”></div>
-    <div>
-    <h2>{{article.title}}</h2>
-    {{article.intro}}
-    <div>
-      <ion-button expand="full" (click)="openDetails()">Go to Details with function</ion-button>
+    <div color="primary" *ngFor='let article of this.articles' style="display:flex;">
+      <div><img src=”{{article.imageUrl}}”></div>
+      <div>
+      <h2>{{article.title}}</h2>
+      {{article.intro}}
+      <div>
+        <ion-button expand="full" (click)="openDetails()">Go to Details with function</ion-button>
+  
+     <div>
 
-   <div>
+  </main>
+  
 
