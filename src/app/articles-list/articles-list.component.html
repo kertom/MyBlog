@@ -1,13 +1,9 @@
 
   <main [fullscreen]="true">
-    <h1 >articles: {{articles}}</h1>
-    <ul>
-      <li *ngFor="let article of articles">{{article}}</li>
-   </ul>
+    
     <div color="blue" *ngFor="let article of articles;" style="display:flex;">
-      <h1>hello</h1>
       <div><img src=”{{article.imageUrl}}”></div>
-      <h2>article title: {{article.title}}</h2>
+      <h2>{{article.title}}</h2>
       {{article.intro}}
       </div>
         <ion-button expand="full" (click)="openDetails()">Go to Details with function</ion-button>
