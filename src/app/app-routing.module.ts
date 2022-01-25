@@ -4,6 +4,7 @@ import { ArticleDetailsPage } from './article-details/article-details.page';
 import { ArticlesListComponent } from './articles-list/articles-list.component';
 import { HomeComponent } from './home/home.component';
 import { ArticleBodyPage } from './article-body/article-body.page';
+import { AboutPage } from './about/about.page';
 
 const routes: Routes = [
   {
@@ -15,8 +16,16 @@ const routes: Routes = [
     component:ArticleBodyPage
   },
   {
+    path: 'about',
+    component: AboutPage
+  },
+  {
     path: '',
     component: HomeComponent
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
   }
   
 ];

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticlesListComponent implements OnInit {
 
-  article=[{
+  articles=[{
     title: 'Article 1',
     intro: 'We discover how...',
     articleBody: '<p>This is my article...</p>',
