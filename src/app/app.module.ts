@@ -6,13 +6,22 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } 
+from './home/home.component';
+
 import { ArticlesMenuComponent } 
 from './articles-menu/articles-menu.component';
+import { ArticlesListComponent } 
+from './articles-list/articles-list.component';
+import { CommonModule } from '@angular/common'
 
 @NgModule({
-  declarations: [AppComponent,ArticlesMenuComponent],
+  declarations: [AppComponent,ArticlesMenuComponent,
+    HomeComponent,
+    ArticlesListComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, CommonModule,
+    IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

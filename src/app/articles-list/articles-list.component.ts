@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from "@angular/common";
+import { BrowserModule } from '@angular/platform-browser'
 
 @Component({
   selector: 'app-articles-list',
@@ -47,7 +48,9 @@ export class ArticlesListComponent implements OnInit {
     // Both of these would work!
     // But the standard Router is recommended.
     // this.navController.navigateForward(`/tabs/films/42`);
-    console.log('go on!');
+    
+    console.log('go on! this.articles= ',this.articles);
+
     //this.router.navigateByUrl(`/tabs/tab2/2`);
   }
 
