@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./article-body.page.scss'],
 })
 export class ArticleBodyPage implements OnInit {
+  title='';
 
   constructor() { }
 

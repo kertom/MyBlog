@@ -2,9 +2,12 @@
   <main [fullscreen]="true">
     
     <div color="blue" *ngFor="let article of articles;" style="display:flex;">
-      <div><img src=”{{article.imageUrl}}”></div>
+      <div routerLink="/articles/{{article.title}}">
+        <img src=”{{article.imageUrl}}”>
       <h2>{{article.title}}</h2>
       {{article.intro}}
+    </div>
+    
       </div>
         <ion-button expand="full" (click)="openDetails()">Go to Details with function</ion-button>
     </main>

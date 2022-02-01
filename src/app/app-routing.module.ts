@@ -12,7 +12,7 @@ const routes: Routes = [
     component:ArticlesListComponent
   },
   {
-    path: 'article-body',
+    path: 'article/:title',
     component:ArticleBodyPage
   },
   {
@@ -22,10 +22,6 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent
-  },
-  {
-    path: 'about',
-    loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
   }
   
 ];
