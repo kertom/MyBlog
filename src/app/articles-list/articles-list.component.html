@@ -1,7 +1,7 @@
 
   <main [fullscreen]="true">
     
-    <div color="blue" *ngFor="let article of articles;" style="display:flex;">
+    <div color="blue" *ngFor="let article of dataService.articles;" style="display:flex;">
       <div routerLink="/articles/{{article.title}}">
         <img src=”{{article.imageUrl}}”>
       <h2>{{article.title}}</h2>

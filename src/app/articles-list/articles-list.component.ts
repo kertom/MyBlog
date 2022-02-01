@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from "@angular/common";
 import { BrowserModule } from '@angular/platform-browser'
+import { DataService } from "../services/data.service";
 
 @Component({
   selector: 'app-articles-list',
@@ -9,38 +10,7 @@ import { BrowserModule } from '@angular/platform-browser'
 })
 export class ArticlesListComponent implements OnInit {
 
-  articles=[{
-    title: 'Article 1',
-    intro: 'We discover how...',
-    articleBody: '<p>This is my article...</p>',
-    imageUrl: 'assets/homePicture.jpg',
-   },
-   {
-    title: 'Article 2',
-    intro: 'We discover how...',
-    articleBody: '<p>This is my article...</p>',
-    imageUrl: 'assets/homePicture.jpg',
-   },
-   {
-    title: 'Article 3',
-    intro: 'We discover how...',
-    articleBody: '<p>This is my article...</p>',
-    imageUrl: 'assets/homePicture.jpg',
-   },
-   {
-    title: 'Article 4',
-    intro: 'We discover how...',
-    articleBody: '<p>This is my article...</p>',
-    imageUrl: 'assets/homePicture.jpg',
-   },
-   {
-    title: 'Article 5',
-    intro: 'We discover how...',
-    articleBody: '<p>This is my article...</p>',
-    imageUrl: 'assets/homePicture.jpg',
-   }];
-
-  constructor() {
+  constructor(public dataService:DataService) {
 
   }
 
@@ -49,7 +19,7 @@ export class ArticlesListComponent implements OnInit {
     // But the standard Router is recommended.
     // this.navController.navigateForward(`/tabs/films/42`);
     
-    console.log('go on! this.articles= ',this.articles);
+    console.log('go on! this.articles= ',this.dataService.articles);
 
     //this.router.navigateByUrl(`/tabs/tab2/2`);
   }

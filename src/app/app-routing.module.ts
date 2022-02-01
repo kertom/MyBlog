@@ -5,6 +5,7 @@ import { ArticlesListComponent } from './articles-list/articles-list.component';
 import { HomeComponent } from './home/home.component';
 import { ArticleBodyPage } from './article-body/article-body.page';
 import { AboutPage } from './about/about.page';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -12,7 +13,7 @@ const routes: Routes = [
     component:ArticlesListComponent
   },
   {
-    path: 'article/:title',
+    path: 'articles/:title',
     component:ArticleBodyPage
   },
   {
@@ -20,8 +21,16 @@ const routes: Routes = [
     component: AboutPage
   },
   {
+    path: '404',
+    component: PageNotFoundComponent
+  },
+  {
     path: '',
     component: HomeComponent
+  },
+  {
+    path: '**',
+    redirectTo: '/404'
   }
   
 ];
