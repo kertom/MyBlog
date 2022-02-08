@@ -143,7 +143,7 @@ export class DataService {
         let currentArticle=this.articles[i];
         console.log('currentArticle= ',currentArticle);
         if(currentArticle.title==articleTitle ){
-          return currentArticle as Observable<Articletype>;
+          return currentArticle as unknown as Observable<Articletype>;
 
         }
       }
