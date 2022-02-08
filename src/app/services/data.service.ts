@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Articletype } from '../interfaces/articletype';
 
 @Injectable({
   providedIn: 'root'
@@ -136,16 +137,19 @@ export class DataService {
   
   }
 
-  getArticleByTitle(articleTitle):Observable{
+  getArticleByTitle(articleTitle):Observable<Articletype>{
     return new Promise(()=>{
       for(let i=0;i<this.articles.length;i++){
         let currentArticle=this.articles[i];
         console.log('currentArticle= ',currentArticle);
         if(currentArticle.title==articleTitle ){
-          return currentArticle;
+          return currentArticle as Observable<Articletype>;
+
+          //return currentArticle;
         }
       }
     });
+  }
     
   }
 
