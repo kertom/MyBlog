@@ -145,13 +145,11 @@ export class DataService {
         if(currentArticle.title==articleTitle ){
           return currentArticle as Observable<Articletype>;
 
-          //return currentArticle;
         }
       }
     });
   }
     
-  }
 
 
 }
