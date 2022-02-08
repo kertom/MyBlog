@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -135,7 +136,7 @@ export class DataService {
   
   }
 
-  getArticleByTitle(articleTitle){
+  getArticleByTitle(articleTitle):Observable{
     return new Promise(()=>{
       for(let i=0;i<this.articles.length;i++){
         let currentArticle=this.articles[i];
