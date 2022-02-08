@@ -6,7 +6,7 @@ import { Articletype } from '../interfaces/articletype';
   providedIn: 'root'
 })
 export class DataService {
-  public articles=[{
+  public articles:Articletype[]=[{
     title: 'Αν οι σκύλοι οδηγοί μιλούσαν',
     //intro: 'We discover how...',
     articleBody: `Γιατί σκύλοι οδηγοί; Γιατί οι τυφλοί να μη χρησιμοποιούν απλά το λευκό μπαστούνι;
@@ -138,7 +138,7 @@ export class DataService {
   }
 
   getArticleByTitle(articleTitle):Observable<Articletype>{
-    return new Promise(()=>{
+    //return new Promise(()=>{
       for(let i=0;i<this.articles.length;i++){
         let currentArticle=this.articles[i];
         console.log('currentArticle= ',currentArticle);
@@ -147,7 +147,7 @@ export class DataService {
 
         }
       }
-    });
+    //});
   }
     
 
