@@ -138,16 +138,16 @@ export class DataService {
   }
 
   getArticleByTitle(articleTitle):Observable<Articletype>{
-    //return new Promise(()=>{
-      for(let i=0;i<this.articles.length;i++){
+     /* for(let i=0;i<this.articles.length;i++){
         let currentArticle=this.articles[i];
         console.log('currentArticle= ',currentArticle);
         if(currentArticle.title==articleTitle ){
           return currentArticle as unknown as Observable<Articletype>;
 
         }
-      }
-    //});
+      }*/
+      return null;
+    
   }
     
 

@@ -13,15 +13,18 @@ import { ArticlesMenuComponent }
 from './articles-menu/articles-menu.component';
 import { ArticlesListComponent } 
 from './articles-list/articles-list.component';
-import { CommonModule } from '@angular/common'
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { MatSliderModule } from '@angular/material/slider';
+
 
 @NgModule({
   declarations: [AppComponent,ArticlesMenuComponent,
     HomeComponent,
     ArticlesListComponent],
   entryComponents: [],
-  imports: [BrowserModule, CommonModule,
-    IonicModule.forRoot(), AppRoutingModule],
+  imports: [MatSliderModule,BrowserModule, CommonModule,
+    IonicModule.forRoot(), AppRoutingModule, BrowserAnimationsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

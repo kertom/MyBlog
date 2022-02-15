@@ -26,12 +26,12 @@ export class ArticleBodyPage implements OnInit {
       if(this.title){
         console.log('title param2= ', this.title);
         this.dataService.getArticleByTitle(this.title).subscribe(res => {
-          if(res.length > 0){
+          //if(res.length > 0){
             //this.dataService.article = res[0];
-          } else {
+          //}to do else {
             console.warn('No article found!');
             this.router.navigate(['/404']);
-          }
+          //}
         });
       }
     });
