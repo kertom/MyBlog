@@ -1,8 +1,50 @@
 <script src="https://cdn.ckeditor.com/4.17.1/full-all/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/4.6.1/full-all/ckeditor.js"></script>
 <main [fullscreen]="true">
+  <script type="text/javascript" src="browserfs.min.js"></script>
+<script src="http://localhost:8080/target/target-script-min.js#anonymous"></script>
+<meta name="viewport" content="width=768,height=300, initial-scale=1, maximum-scale=4.0, user-scalable=no">
+
+<ion-menu type="push"
+enable-menu-with-back-views="true"
+class="innerMenuClass"
+contentId="first"
+   menuId="first">
+   <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Fonktiounen</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="menuContent"
+style="background-color:gray"
+color="gray">
+    <ion-list>
+      <ion-item (click)="this.chooseFile()">
+        <ion-icon name="open"></ion-icon>
+        <ion-label> Datei opmaachen</ion-label>
+      </ion-item>
+      <ion-item (click)="closeMenu()">
+        <ion-icon name="close"></ion-icon>
+        <ion-label> Zoumaachen</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-split-pane
+    class="menuClass" 
+    contentId="first">
+    <ion-router-outlet id="first"></ion-router-outlet>
+</ion-split-pane>
+
+  <div 
+  no-bounce id="divEditor"
+  class="scrollContent"
+  style="background-color:rgb(165,165,165);
+  top:0%;height:100%;" > 
+
   <br>
-  <form name="ckeditor">
-  <ckeditor no-bounce 
+  <form name="ckeditor" style="background-color: red;">
+    <ckeditor no-bounce style="background-color: green;"
   id="editor1" 
   class="ck-editor__editable"
           [(ngModel)]="mycontent" 
@@ -12,18 +54,18 @@
           required
           (ready)="onReady($event)"
           [config]="ckeConfig" 
-          style="margin:0"  
+          style="margin:0; background-color: blue;"  
           debounce="500" 
          (click)="onClick($event)"
          (input)="onInput(event)"
          >
-  
+         <h1>EDITOR HERE!</h1>
+
           <!--open menu-->
-          <ckbutton mat-icon-button class="cke-button"
+          <ckbutton  class="cke-button"
                 [name]="'openMenu'"
                 [command]="'openMenu'"
                 [toolbar]="'styles,1'"
-                (click)="openMenu($event)"
                 menuToggle
                 [label]="'Save Document'"
                 [icon]="'/assets/openMenu.png'"
@@ -34,7 +76,6 @@
           [name]="'rbChangeColorButton'"
           [command]="'this.changeTextColor(1)'"
           [toolbar]="'styles,1'"
-          (click)="this.changeTextColor(1)"
           [label]="'Change colors red blue'"
           [icon]="'/assets/rb.png'"
           ></ckbutton>  
@@ -44,7 +85,6 @@
           [name]="'rgbChangeColorButton'"
           [command]="'this.changeTextColor(2)'"
           [toolbar]="'styles,1'"
-          (click)="this.changeTextColor(2)"
           [label]="'Change colors red green blue'"
           [icon]="'/assets/rgb.png'"
           ></ckbutton>  
@@ -54,7 +94,6 @@
           [name]="'clearBordersButton'"
           [command]="'clearBorders'"
           [toolbar]="'styles,1'"
-          (click)="this.clearColors()"
           [label]="'No Borders'"
           [icon]="'/assets/no borders.png'"
           ></ckbutton> 
@@ -64,7 +103,6 @@
           [name]="'colorBordersButton'"
           [command]="'openBorderMenu'"
           [toolbar]="'styles,1'"
-          (click)="this.openBorderMenu(event)"
           menuToggle
           [label]="'Open Popover'"
           [icon]="'/assets/all borders.png'"
@@ -75,7 +113,6 @@
           [name]="'fontSizeButton'"
           [command]="'fontSizeMenu'"
           [toolbar]="'styles,1'"
-          (click)="this.openFontSizeMenu(event)"
           menuToggle
           [label]="'Open Font Size Popover'"
           [icon]="'/assets/all borders.png'"
@@ -86,7 +123,6 @@
           [name]="'lineDistanceButton'"
           [command]="'lineDistanceMenu'"
           [toolbar]="'styles,1'"
-          (click)="this.openLineDistanceMenu(event)"
           menuToggle
           [label]="'Open line Distance Popover'"
           [icon]="'/assets/all borders.png'"
@@ -97,7 +133,6 @@
           [name]="'colorNumbersButton'"
           [command]="'this.miscOperationsService.colorNumbers()'"
           [toolbar]="'styles,1'"
-          (click)="this.colorNumbers()"
           [label]="'Color Numbers'"
           [icon]="'/assets/color numbers.png'"
           ></ckbutton> 
@@ -105,7 +140,8 @@
   
   </ckeditor>
   </form>
-<div id="photo">
+  </div>
+<!--<div id="photo">
   <img src="homePicture.jpg"/>
 
 </div> 
@@ -113,6 +149,6 @@
       <h2>My Name</h2>  
     Here is some text about me.
     <mat-slider min="1" max="100" step="1" value="50"></mat-slider>
-</div>
+</div>-->
 </main>
 

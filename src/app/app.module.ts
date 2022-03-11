@@ -17,6 +17,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatSliderModule } from '@angular/material/slider';
 import { CKEditorModule } from 'ng2-ckeditor';//'@ckeditor/ckeditor5-angular';
+import { NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 @NgModule({
@@ -29,5 +30,7 @@ import { CKEditorModule } from 'ng2-ckeditor';//'@ckeditor/ckeditor5-angular';
     IonicModule.forRoot(), AppRoutingModule, BrowserAnimationsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA ]
 })
 export class AppModule {}

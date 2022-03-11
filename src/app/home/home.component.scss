@@ -1,21 +1,147 @@
-main{
-    
-    display: flex;
-  }
-  
-  #photo{
-    background-image: url("homePicture.jpg");//https://img.yachting.org/user/200/65.jpg);//  
-    border-radius: 50%;
-    height: 200px;
-    width: 200px;
-    // display: inline-block;
-    // float: right;
-  }
-  
-  #text{
-    margin-left: 20px;
-    
-    h2{
-      margin: 0;
-    }
-  }
+.menuToggleButton{
+  position:absolute;
+  top:10%;
+  width:5%;
+  height:80%;
+  font-size: 20pt;
+  z-index: 10;
+}
+.innerMenuClass{
+    position: absolute;
+    z-index: 1000;
+}
+.menuClass{
+  position: absolute;
+  width: 100%;
+  height: 1024;
+  top:0%;
+  left:0%;
+}
+.cke_toolbar{
+position:absolute;
+height:10%;
+}
+.cke_button {
+padding: 14px 16px !important;
+}
+.cke_button_icon {
+transform: scale(1.6);
+}  
+.spanClass{
+position:relative;
+left:0%;
+width:100%;
+padding-left: 5px;
+padding-right: 5px;
+margin-left: auto;
+margin-right: auto;       
+}
+.pageClass{
+position:absolute;
+display:block;
+text-align:left;
+left:20%;
+width:70%;
+height:70%;
+margin:auto;
+padding-top:7%;
+}
+img{
+display: block;
+}
+.images-parent{
+display:none;
+text-align: center;
+background-color:green !important;
+z-index:2;
+position:absolute;
+top:0%;
+left:40%;
+width:30%;
+height:40%;
+}
+.left-image{
+position:absolute;
+top:0%;
+max-width: 20% !important;
+}
+.center-image{
+margin:0 auto;
+top:80%;
+max-width: 20% !important;
+}
+.right-image{
+top:20%;
+max-width: 20% !important;
+}
+.top-image{
+top:40%;
+max-width: 20% !important;
+}
+.bottom-image{
+top:60%;
+max-width: 20% !important;
+}
+.all-images{
+position:absolute;
+}
+.underlineLines {
+text-decoration: underline;
+text-decoration-color: red;
+-webkit-text-decoration-color: red;
+}
+span::selection {
+background-color: green;
+}
+
+span:nth-of-type(3n)::selection {
+color: red;
+} 
+
+span:nth-of-type(3n + 1)::selection {
+color: #0f0;
+}
+
+span:nth-of-type(3n + 2)::selection {
+color: cyan;
+}
+.cke_button_on {
+background-color: #7CA2D5 !important;
+border-color: #7CA2D5 !important;
+}
+.cke_button_off:hover {
+background-color: #7CA2D5 !important;
+border-color: #7CA2D5 !important;
+}
+.optionIsActive{
+background-color: #FF0000 !important;
+border-color: #FF0000 !important;
+}
+.cke_menubutton:focus {
+background-color: unset !important;
+}
+.cke_button__openmenu {
+border-right: 5px solid #000000aa !important;
+margin-right: 10px !important;
+}
+
+#loading{
+position: absolute;
+left: 50%;
+top: 50%;
+z-index: 1;
+width: 150px;
+height: 150px;
+margin: -75px 0 0 -75px;
+border: 16px solid #f3f3f3;
+border-radius: 50%;
+border-top: 16px solid #3498db;
+width: 120px;
+height: 120px;
+animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
