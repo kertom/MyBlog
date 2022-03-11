@@ -16,6 +16,7 @@ from './articles-list/articles-list.component';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatSliderModule } from '@angular/material/slider';
+import { CKEditorModule } from 'ng2-ckeditor';//'@ckeditor/ckeditor5-angular';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { MatSliderModule } from '@angular/material/slider';
     HomeComponent,
     ArticlesListComponent],
   entryComponents: [],
-  imports: [MatSliderModule,BrowserModule, CommonModule,
+  imports: [CKEditorModule,
+    MatSliderModule,BrowserModule, CommonModule,
     IonicModule.forRoot(), AppRoutingModule, BrowserAnimationsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
