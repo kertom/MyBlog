@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatSliderModule } from '@angular/material/slider';
 import { CKEditorModule } from 'ng2-ckeditor';//'@ckeditor/ckeditor5-angular';
 import { NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+//import ckeditor from "ckeditor";
 
 
 @NgModule({
